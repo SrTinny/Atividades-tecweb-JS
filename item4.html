@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var aluno = new Object();
+        aluno.mat = 416855
+        aluno.nota1 = 5
+        aluno.nota2 = 6
+        aluno.nota3 = 0
+
+        function fMedia (m, nota1, nota2, nota3) {
+            let media
+
+            if (nota1 > nota2 && nota1 > nota3) {
+                media = (nota1*4 + nota2*3 + nota3*3)/10
+            } else if (nota2 > nota1 && nota2>nota3) {
+                media = (nota1*3 + nota2*4 + nota3*3)/10
+            } else {
+                media = (nota1*3 + nota2*3 + nota3*4)/10
+            }
+            return media;
+        }
+
+        let situacao = fMedia(aluno.mat, aluno.nota1, aluno.nota2, aluno.nota3);
+
+        if(situacao >= 5){
+            console.log("APROVADO")
+        }
+        if(situacao < 5){
+            console.log("REPROVADO")
+        }
+    </script>
+</body>
+</html>
