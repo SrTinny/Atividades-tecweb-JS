@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function f1(vet, n){
+            let r = []
+            for(i=0; i<vet.length; i++){
+                r[i] = vet[i]*n
+            }
+            console.log(r)
+        }
+
+        function f2(vet, n){
+            let r = []
+            for(i=0; i<vet.length; i++){
+                if(vet[i] > 5) {
+                    r[i] = vet[i]*n
+                }
+            }
+            console.log(r)
+        }
+        
+        let a = [1, 3, 7, 11, 13]
+
+        f1(a, 2)
+        f2(a, 2)
+    </script>
+</body>
+</html>
